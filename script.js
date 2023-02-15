@@ -32,19 +32,18 @@ function getUser(usersArr) {
         userCard.classList.add("user-card");
 
         let login = document.createElement('p');
+        login.classList.add("user-card-text");
         login.textContent = data.login;
 
         let avatarUrl = document.createElement('p');
+        avatarUrl.classList.add("user-card-text");
         avatarUrl.textContent = data.avatar_url;
 
 
-        userCard.append(login, avatarUrl)
-        outputDiv.append(userCard)
-
+        userCard.append(login, avatarUrl);
+        outputDiv.append(userCard);
 
     });
-
-
 
 }
 
