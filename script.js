@@ -23,8 +23,13 @@ function getUsersApi() {
         })
         .catch((error) => console.error(error));
 
+    let message = document.getElementById('message')
+    if (message.style.display === 'none') {
+        message.style.display = "block"
+    } else {
+        message.style.display = "none"
+    };
 };
-
 
 function getUser(usersArr) {
     let outputDiv = document.getElementById('output');
