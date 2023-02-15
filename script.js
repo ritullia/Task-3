@@ -14,16 +14,17 @@ const ENDPOINT = "https://api.github.com/users";
 
 let data
 
-document.getElementById('btn').addEventListener("click", () => {
+function getUsersApi() {
     fetch(ENDPOINT)
         .then((response) => response.json())
         .then((result) => {
             console.log(result);
-            data = result;
-            getUser(result);
+            data = getUser(result);
         })
         .catch((error) => console.error(error));
-});
+
+};
+
 
 function getUser(usersArr) {
     let outputDiv = document.getElementById('output');
@@ -47,7 +48,6 @@ function getUser(usersArr) {
 
     });
 
+};
 
-
-}
-
+document.getElementById('btn').addEventListener("click", getUsersApi);
